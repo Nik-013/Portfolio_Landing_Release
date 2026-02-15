@@ -1,0 +1,99 @@
+/* =================================================================
+   УРОВЕНЬ 1: КОНТЕЙНЕР ФУТЕРА
+   ================================================================= */
+
+/* Основной контейнер футера с вертикальным лейаутом */
+.footer_minimal {
+  /* Display & Flow */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+
+  /* Padding & Margin */
+  margin-top: var(--spacing-xxl);
+  padding-block: var(--spacing-xl);
+
+  /* Border */
+  border-top: 1px solid var(--border-decorative);
+
+  /* Font */
+  text-align: center;
+}
+
+/* =================================================================
+   УРОВЕНЬ 2: БЛОК СООБЩЕНИЯ
+   ================================================================= */
+
+/* Контейнер для сообщения и заголовка */
+.footer_message {
+  /* Display & Flow */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Заголовок футера */
+.footer_message h2 {
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  font-size: var(--font-size-h3);
+  font-weight: 500;
+}
+
+/* =================================================================
+   УРОВЕНЬ 3: СТАТУС КОНТАКТА
+   ================================================================= */
+
+/* Статус доступности (контакты, предложения и т.д.) */
+.status_footer {
+  /* Decorations */
+  opacity: 1;
+
+  /* Color */
+  color: var(--text-accent);
+
+  /* Font */
+  font-size: var(--font-size-body-lg);
+  font-weight: 500;
+}
+
+/* =================================================================
+   УРОВЕНЬ 4: МЕТА-ИНФОРМАЦИЯ
+   ================================================================= */
+
+/* Мета-информация футера (авторские права, год и т.д.) */
+.footer_meta {
+  /* Decorations */
+  opacity: 0.6;
+
+  /* Color */
+  color: var(--text-primary);
+}
+
+/* Текст мета-информации */
+.footer_meta span {
+  /* Font */
+  font-size: var(--font-size-body-sm);
+  font-weight: 400;
+}
+
+/* =================================================================
+   АДАПТИВНЫЕ СТИЛИ (DESKTOP - 992px и выше)
+   ================================================================= */
+
+@media (min-width: 992px) {
+
+  /* Контейнер футера: увеличение отступов для desktop */
+  .footer_minimal {
+    /* Padding & Margin */
+    padding-block: var(--spacing-xxl);
+  }
+
+  /* Заголовок: увеличение размера шрифта для desktop */
+  .footer_message h2 {
+    /* Font */
+    font-size: var(--font-size-h1);
+  }
+}

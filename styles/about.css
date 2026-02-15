@@ -1,0 +1,175 @@
+/* =================================================================
+   УРОВЕНЬ 1: КОНТЕЙНЕР СЕКЦИИ
+   ================================================================= */
+
+/* Основной контейнер секции "О мне" */
+.section_intro {
+  /* Display & Flow */
+  display: flex;
+  align-items: center;
+
+  /* Padding & Margin */
+  margin: var(--spacing-xl) 0;
+  padding-block: var(--spacing-xxl);
+  padding-inline: var(--spacing-lg);
+
+  /* Border */
+  border-radius: 0 0 var(--radius-default) var(--radius-default);
+
+  /* Background */
+  background-color: var(--bg-surface-secondary);
+}
+
+/* =================================================================
+   УРОВЕНЬ 2: КОНТЕЙНЕР КОНТЕНТА
+   ================================================================= */
+
+/* Контейнер для размещения аватара и текста */
+.wrapper_intro {
+  /* Display & Flow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+
+  /* Dimensions */
+  width: 100%;
+
+  /* Font */
+  text-align: center;
+}
+
+/* =================================================================
+   УРОВЕНЬ 3: ИЗОБРАЖЕНИЕ АВАТАРА
+   ================================================================= */
+
+/* Аватар с градиентной границей */
+.img_intro {
+  /* Display & Flow */
+  display: block;
+
+  /* Dimensions */
+  width: clamp(250px, 40vw, 300px);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  /* Border */
+  border: 3px solid transparent;
+  border-radius: var(--radius-circle);
+
+  /* Background */
+  background-image:
+    linear-gradient(to right, var(--bg-surface-secondary), var(--bg-surface-secondary)),
+    linear-gradient(45deg, var(--interactive-accent-primary), var(--interactive-gradient-end));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* Decorations */
+  object-fit: cover;
+  box-shadow: 0 0 20px var(--shadow-color-accent);
+}
+
+/* =================================================================
+   УРОВЕНЬ 4: КОНТЕЙНЕР ТЕКСТОВОГО БЛОКА
+   ================================================================= */
+
+/* Текстовой блок с градиентной границей */
+.text_intro_container {
+  /* Display & Flow */
+  display: flex;
+  flex-direction: column;
+
+  /* Padding & Margin */
+  padding: var(--spacing-lg);
+
+  /* Border */
+  border: 3px solid transparent;
+  border-radius: var(--radius-ex);
+
+  /* Background */
+  background-image:
+    linear-gradient(to right, var(--bg-surface-secondary), var(--bg-surface-secondary)),
+    linear-gradient(15deg, var(--interactive-accent-primary), var(--interactive-gradient-end));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* Decorations */
+  box-shadow: 0 0 20px var(--shadow-color-accent);
+}
+
+/* =================================================================
+   УРОВЕНЬ 5: ЗАГОЛОВОК "О МНЕ"
+   ================================================================= */
+
+/* Заголовок текстового блока */
+.head_intro {
+  /* Padding & Margin */
+  margin-bottom: var(--spacing-md);
+
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  font-size: var(--font-size-body-lg);
+}
+
+/* =================================================================
+   УРОВЕНЬ 6: ОСНОВНОЙ ТЕКСТ
+   ================================================================= */
+
+/* Описание о человеке */
+.text_intro {
+  /* Padding & Margin */
+  margin-bottom: var(--spacing-sm);
+
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  font-size: var(--font-size-body-md);
+  line-height: 1.8;
+}
+
+/* =================================================================
+   УРОВЕНЬ 7: СТАТУС
+   ================================================================= */
+
+/* Статус с выделением */
+.status_intro {
+  /* Padding & Margin */
+  margin-bottom: var(--spacing-md);
+
+  /* Color */
+  color: var(--text-accent);
+
+  /* Font */
+  font-size: var(--font-size-body-lg);
+  font-weight: 700;
+}
+
+/* =================================================================
+   АДАПТИВНЫЕ СТИЛИ (DESKTOP - 992px и выше)
+   ================================================================= */
+
+@media (min-width: 992px) {
+
+  /* Контейнер контента: на desktop переходит в горизонтальный layout */
+  .wrapper_intro {
+    /* Display & Flow */
+    flex-direction: row;
+    gap: var(--spacing-xl);
+
+    /* Padding & Margin */
+    padding: var(--spacing-lg);
+
+    /* Font */
+    text-align: left;
+  }
+
+  /* Аватар: увеличение размера для desktop */
+  .img_intro {
+    /* Dimensions */
+    width: clamp(300px, 22vw, 350px);
+  }
+}

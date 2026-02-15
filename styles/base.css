@@ -1,0 +1,411 @@
+/* =================================================================
+   УРОВЕНЬ 1: ПОДКЛЮЧЕНИЕ ШРИФТОВ
+   ================================================================= */
+
+/* Montserrat 300 - Light */
+@font-face {
+  /* Font */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+
+  /* Font loading */
+  font-display: swap;
+
+  /* Source */
+  src: url('../public/fonts/montserrat-v31-cyrillic_latin-300.woff2') format('woff2');
+}
+
+/* Montserrat 400 - Regular */
+@font-face {
+  /* Font */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+
+  /* Font loading */
+  font-display: swap;
+
+  /* Source */
+  src: url('../public/fonts/montserrat-v31-cyrillic_latin-regular.woff2') format('woff2');
+}
+
+/* Montserrat 500 - Medium */
+@font-face {
+  /* Font */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+
+  /* Font loading */
+  font-display: swap;
+
+  /* Source */
+  src: url('../public/fonts/montserrat-v31-cyrillic_latin-500.woff2') format('woff2');
+}
+
+/* Montserrat 700 - Bold */
+@font-face {
+  /* Font */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+
+  /* Font loading */
+  font-display: swap;
+
+  /* Source */
+  src: url('../public/fonts/montserrat-v31-cyrillic_latin-700.woff2') format('woff2');
+}
+
+/* Montserrat 900 - Black */
+@font-face {
+  /* Font */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+
+  /* Font loading */
+  font-display: swap;
+
+  /* Source */
+  src: url('../public/fonts/montserrat-v31-cyrillic_latin-900.woff2') format('woff2');
+}
+
+/* =================================================================
+   УРОВЕНЬ 2: CSS ПЕРЕМЕННЫЕ (DESIGN TOKENS)
+   ================================================================= */
+
+/* Корневые переменные для всего приложения */
+:root {
+  /* Цветовая палитра - примитивы */
+  --palette-dark-purple-900: #0b001a;
+  --palette-dark-purple-700: #1e0044;
+  --palette-light-purple-100: #e9deff;
+  --palette-accent-purple-500: #a043ff;
+  --palette-accent-purple-700: #7b00ff;
+  --palette-accent-pink-500: #ff80a6;
+  --palette-special-shadow-mauve-500: rgb(155, 127, 152);
+
+  /* Семантические переменные - фоны */
+  --bg-surface-primary: var(--palette-dark-purple-900);
+  --bg-surface-secondary: var(--palette-dark-purple-700);
+  --bg-surface-inverted: var(--palette-light-purple-100);
+
+  /* Семантические переменные - текст */
+  --text-primary: var(--palette-light-purple-100);
+  --text-accent: var(--palette-accent-purple-500);
+  --text-on-inverted-primary: var(--palette-dark-purple-900);
+  --text-on-inverted-secondary: var(--palette-dark-purple-700);
+  --text-on-inverted-accent: var(--palette-accent-purple-500);
+  --text-on-interactive: var(--palette-light-purple-100);
+
+  /* Семантические переменные - интерактивные элементы */
+  --interactive-accent-primary: var(--palette-accent-purple-500);
+  --interactive-accent-hover: var(--palette-accent-purple-700);
+  --interactive-accent-dark: var(--palette-dark-purple-900);
+  --interactive-gradient-end: var(--palette-accent-pink-500);
+
+  /* Семантические переменные - границы */
+  --border-interactive: var(--palette-accent-purple-500);
+  --border-decorative: var(--palette-dark-purple-700);
+
+  /* Семантические переменные - тени */
+  --shadow-color-primary: hsla(from var(--palette-dark-purple-900) h s l / 0.5);
+  --shadow-color-accent: hsla(from var(--palette-accent-purple-500) h s l / 0.7);
+  --shadow-color-hover: var(--palette-special-shadow-mauve-500);
+
+  /* Размеры - радиусы скругления */
+  --radius-default: 25px;
+  --radius-ex: 50px;
+  --radius-circle: 50%;
+
+  /* Размеры - хедер */
+  --header-height: 78px;
+  --header-top-offset: 20px;
+  --patch-correction-top: -15px;
+  --icon-size: 22px;
+
+  /* Размеры - отступы (spacing scale) */
+  --spacing-xxxl: 110px;
+  --spacing-xxl: 80px;
+  --spacing-xl: 50px;
+  --spacing-lg: 36px;
+  --spacing-md: 20px;
+  --spacing-sm: 15px;
+  --spacing-xs: 10px;
+  --spacing-xxs: 8px;
+
+  /* Размеры - типографика */
+  --font-size-h1: 2.8rem;
+  --font-size-h2: 2.2rem;
+  --font-size-h3: 1.6rem;
+  --font-size-body-lg: 1.4rem;
+  --font-size-body-md: 1.2rem;
+  --font-size-body-sm: 0.9rem;
+  --font-size-body-xs: 0.8rem;
+  --font-size-logo: 1.5rem;
+
+  /* Размеры - z-index */
+  --z-patch: 999;
+  --z-header: 1000;
+  --z-menu: 1001;
+  --z-burger: 1002;
+  --z-modal: 2000;
+  --z-modal-close: 2001;
+  --z-skip-link: 2002;
+}
+
+/* =================================================================
+   УРОВЕНЬ 3: СБРОС И БАЗОВЫЕ ТЕГИ
+   ================================================================= */
+
+/* Сброс всех элементов (box-sizing + margin/padding) */
+* {
+  /* Padding & Margin */
+  margin: 0;
+  padding: 0;
+
+  /* Box Model */
+  box-sizing: border-box;
+}
+
+/* Корневые элементы HTML документа */
+html,
+body {
+  /* Dimensions */
+  min-height: 100vh;
+
+  /* Font */
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-primary);
+
+  /* Background */
+  background-color: var(--bg-surface-primary);
+
+  /* Behavior */
+  scroll-behavior: smooth;
+}
+
+/* Медиаэлементы - адаптивные размеры */
+img,
+video,
+canvas,
+svg {
+  /* Display & Flow */
+  display: block;
+
+  /* Dimensions */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Контейнер изображения */
+picture {
+  /* Display & Flow */
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Элементы формы наследуют шрифт */
+input,
+button,
+textarea,
+select {
+  /* Font */
+  font: inherit;
+}
+
+/* Текстовые элементы с переносом слов */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Text wrapping */
+  overflow-wrap: break-word;
+}
+
+/* =================================================================
+   УРОВЕНЬ 4: УТИЛИТЫ И ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ
+   ================================================================= */
+
+/* Блокировка прокрутки страницы (управляется JavaScript) */
+body.lock {
+  /* Overflow */
+  overflow: hidden;
+}
+
+/* Ограничивающий контейнер для основного контента */
+.container {
+  /* Dimensions */
+  width: 100%;
+  max-width: 1440px;
+
+  /* Padding & Margin */
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Фиксированная заплатка для скрытия щели над хедером */
+.header_patch {
+  /* Position */
+  position: fixed;
+  top: var(--patch-correction-top);
+  left: 0;
+  z-index: var(--z-patch);
+
+  /* Dimensions */
+  width: 100%;
+  height: calc(var(--header-height) + var(--header-top-offset));
+
+  /* Background */
+  background-color: var(--bg-surface-primary);
+}
+
+/* Фокус для доступности (видимое обводка при фокусе) */
+:focus-visible {
+  /* Border */
+  outline: 3px solid var(--interactive-accent-dark);
+  border-radius: var(--radius-default);
+  outline-offset: var(--spacing-xxs);
+}
+
+/* Скрытие элементов визуально, но видно для скринридеров */
+.sr_only {
+  /* Position */
+  position: absolute;
+
+  /* Dimensions */
+  width: 1px;
+  height: 1px;
+
+  /* Padding & Margin */
+  margin: -1px;
+  padding: 0;
+
+  /* Border */
+  border-width: 0;
+
+  /* Overflow */
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Ссылка "Пропустить контент" (для доступности) */
+.skip_link {
+  /* Position */
+  position: absolute;
+  top: calc(-1*var(--spacing-xl));
+  left: var(--spacing-xs);
+  z-index: var(--z-skip-link);
+
+  /* Padding & Margin */
+  padding: var(--spacing-xxs);
+
+  /* Background */
+  background: var(--interactive-accent-primary);
+
+  /* Border */
+  border-radius: var(--spacing-xxs);
+
+  /* Color */
+  color: var(--text-on-interactive);
+
+  /* Font */
+  text-decoration: none;
+
+  /* Transition */
+  transition: top 0.25s ease;
+}
+
+/* Видимое положение skip-link при фокусе */
+.skip_link:focus-visible {
+  /* Position */
+  top: var(--spacing-xs);
+}
+
+/* Смещение якорей для фиксированного хедера (scroll padding) */
+#home,
+#about,
+#portfolio,
+#skills,
+#contact {
+  /* Scroll Behavior */
+  scroll-margin-top: calc(var(--header-height) + var(--header-top-offset));
+}
+
+/* SVG иконка из спрайта */
+svg.icon_ui {
+  /* Display & Flow */
+  display: inline-block;
+  vertical-align: middle;
+
+  /* Dimensions */
+  width: 1em;
+  height: 1em;
+
+  /* Decorations */
+  fill: currentColor;
+}
+
+/* =================================================================
+   УРОВЕНЬ 5: ГЛОБАЛЬНЫЕ АНИМАЦИИ (KEYFRAMES)
+   ================================================================= */
+
+/* Поворот с появлением (для бургера и кнопки закрытия модала) */
+@keyframes rotateEntrance {
+  from {
+    /* Transform */
+    transform: rotate(-90deg);
+
+    /* Decorations */
+    opacity: 0;
+  }
+
+  to {
+    /* Transform */
+    transform: rotate(0deg);
+
+    /* Decorations */
+    opacity: 1;
+  }
+}
+
+/* Масштабирование с появлением (для контента модального окна) */
+@keyframes zoomIn {
+  from {
+    /* Transform */
+    transform: scale(0.9);
+
+    /* Decorations */
+    opacity: 0;
+  }
+
+  to {
+    /* Transform */
+    transform: scale(1);
+
+    /* Decorations */
+    opacity: 1;
+  }
+}
+
+/* =================================================================
+   УРОВЕНЬ 6: МЕДИАЗАПРОСЫ И ДОСТУПНОСТЬ
+   ================================================================= */
+
+/* Отключение анимаций для пользователей с предпочтением «сокращение движения» */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    /* Animation */
+    animation: none !important;
+    transition: none !important;
+
+    /* Behavior */
+    scroll-behavior: auto !important;
+  }
+}

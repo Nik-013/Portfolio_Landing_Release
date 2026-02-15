@@ -1,0 +1,187 @@
+/* =================================================================
+   УРОВЕНЬ 1: КОНТЕЙНЕР МОДАЛЬНОГО ОКНА
+   ================================================================= */
+
+/* Основная обертка модального окна с затемненным фоном */
+.modal {
+  /* Display & Flow */
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* Position */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-modal);
+
+  /* Dimensions */
+  width: 100%;
+  height: 100%;
+
+  /* Overflow */
+  overflow: auto;
+
+  /* Padding & Margin */
+  padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
+
+  /* Background */
+  background-color: var(--bg-surface-primary);
+}
+
+/* =================================================================
+   УРОВЕНЬ 2: КОНТЕНТ МОДАЛЬНОГО ОКНА
+   ================================================================= */
+
+/* Контент внутри модального окна с анимацией */
+.modal_content {
+  /* Display & Flow */
+  display: block;
+
+  /* Dimensions */
+  width: auto;
+  height: auto;
+  max-width: 90%;
+
+  /* Padding & Margin */
+  margin: auto;
+
+  /* Border */
+  border-radius: 8px;
+
+  /* Decorations */
+  box-shadow: 0 0 20px var(--shadow-color-primary);
+
+  /* Animation */
+  animation: zoomIn 0.3s;
+}
+
+/* =================================================================
+   УРОВЕНЬ 3: КНОПКА ЗАКРЫТИЯ МОДАЛА
+   ================================================================= */
+
+/* Кнопка закрытия модального окна с иконкой крестика */
+.close_modal {
+  /* Position */
+  position: fixed;
+  top: 78px;
+  right: 41px;
+  z-index: var(--z-modal-close);
+
+  /* Padding & Margin */
+  padding: 0;
+
+  /* Border */
+  border: none;
+
+  /* Background */
+  background: transparent;
+
+  /* Color */
+  color: var(--text-on-inverted-accent);
+
+  /* Font */
+  font-size: var(--font-size-h3);
+
+  /* Decorations */
+  opacity: 0;
+
+  /* Interaction */
+  cursor: pointer;
+
+  /* Animation */
+  animation: rotateEntrance 0.4s ease forwards;
+  animation-delay: 0.1s;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Состояние наведения на кнопку закрытия */
+.close_modal:hover {
+  /* Color */
+  color: var(--interactive-accent-primary);
+
+  /* Transform */
+  transform: rotate(90deg);
+}
+
+/* Фокус для доступности */
+.close_modal:focus-visible {
+  /* Border */
+  outline: 2px solid var(--interactive-accent-primary);
+  border-radius: 5px;
+}
+
+/* =================================================================
+   УРОВЕНЬ 4: КНОПКИ НАВИГАЦИИ ГАЛЕРЕИ
+   ================================================================= */
+
+/* Кнопки навигации для пролистывания изображений (слева/справа) */
+.modal_nav_btn {
+  /* Position */
+  position: fixed;
+  top: 50%;
+  z-index: var(--z-modal-close);
+
+  /* Display & Flow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Dimensions */
+  width: 50px;
+  height: 50px;
+
+  /* Padding & Margin */
+  padding: 0;
+
+  /* Border */
+  border: 1px solid var(--border-decorative);
+  border-radius: 50%;
+  /* круглая форма */
+
+  /* Background */
+  background-color: var(--bg-surface-primary);
+
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  font-size: var(--font-size-h1);
+
+  /* Interaction */
+  cursor: pointer;
+
+  /* Transform */
+  transform: translateY(-50%);
+
+  /* Transition */
+  transition: all 0.3s ease;
+}
+
+/* Состояние наведения на кнопку навигации */
+.modal_nav_btn:hover {
+  /* Background */
+  background-color: var(--interactive-accent-primary);
+
+  /* Color */
+  color: var(--text-on-inverted-primary);
+  border-color: var(--interactive-accent-primary);
+}
+
+/* Фокус для доступности */
+.modal_nav_btn:focus-visible {
+  /* Border */
+  outline: 2px solid var(--interactive-accent-primary);
+}
+
+/* Кнопка "Предыдущее" - позиция слева */
+.modal_prev {
+  /* Position */
+  left: 20px;
+}
+
+/* Кнопка "Следующее" - позиция справа */
+.modal_next {
+  /* Position */
+  right: 20px;
+}

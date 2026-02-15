@@ -1,0 +1,441 @@
+/* =================================================================
+   УРОВЕНЬ 1: КОНТЕЙНЕР ХЕДЕРА
+   ================================================================= */
+
+/* Фиксированный хедер с центрированием */
+header {
+  /* Position */
+  position: fixed;
+  top: var(--spacing-md);
+  left: 50%;
+  z-index: var(--z-header);
+
+  /* Display & Flow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+
+  /* Dimensions */
+  width: calc(100% - (var(--spacing-md) * 2));
+  max-width: 1400px;
+  height: var(--header-height);
+
+  /* Padding & Margin */
+  padding: 0 var(--spacing-lg);
+
+  /* Border */
+  border-radius: var(--radius-default) var(--radius-default) 0 0;
+
+  /* Background */
+  background-color: var(--bg-surface-secondary);
+
+  /* Decorations */
+  will-change: transform;
+  backface-visibility: hidden;
+
+  /* Transition */
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+
+  /* Transform */
+  transform: translateX(-50%);
+}
+
+/* Хедер с появлением тени при скролле */
+header.scrolled {
+  /* Border */
+  border-radius: var(--radius-default);
+
+  /* Decorations */
+  box-shadow: 0 5px 20px var(--shadow-color-primary);
+}
+
+/* =================================================================
+   УРОВЕНЬ 2: ЛОГОТИП
+   ================================================================= */
+
+/* Контейнер логотипа */
+.logo_container {
+  /* Display & Flow */
+  flex-grow: 0;
+
+  /* Font */
+  text-align: left;
+}
+
+/* Ссылка логотипа */
+.logo {
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  text-decoration: none;
+}
+
+/* Текст логотипа */
+.logo_container span {
+  /* Font */
+  font-size: var(--font-size-logo);
+  font-weight: 700;
+}
+
+/* =================================================================
+   УРОВЕНЬ 3: КНОПКА БУРГЕР МЕНЮ
+   ================================================================= */
+
+/* Кнопка открытия/закрытия мобильного меню */
+.burger_btn {
+  /* Position */
+  z-index: var(--z-burger);
+
+  /* Display & Flow */
+  display: block;
+
+  /* Border */
+  border: none;
+
+  /* Background */
+  background: none;
+
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  font-size: var(--icon-size);
+
+  /* Interaction */
+  cursor: pointer;
+
+  /* Transition */
+  transition: color 0.3s ease;
+}
+
+/* Активное состояние кнопки бургер */
+.burger_btn.active {
+  /* Color */
+  color: var(--text-on-inverted-accent);
+}
+
+/* Иконка меню (три полоски) */
+.burger_btn .icon-close {
+  /* Display & Flow */
+  display: none;
+}
+
+/* Скрытие меню при активном состоянии */
+.burger_btn.active .icon-bars {
+  /* Display & Flow */
+  display: none;
+}
+
+/* Иконка закрытия (крестик) с анимацией */
+.burger_btn.active .icon-close {
+  /* Display & Flow */
+  display: block;
+
+  /* Animation */
+  animation: rotateEntrance 0.4s ease forwards;
+}
+
+/* =================================================================
+   УРОВЕНЬ 4: КОНТЕЙНЕР МОБИЛЬНОГО МЕНЮ
+   ================================================================= */
+
+/* Мобильное меню (шторка) */
+.menu_container {
+  /* Position */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-menu);
+
+  /* Display & Flow */
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+
+  /* Dimensions */
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  /* Padding & Margin */
+  padding-top: var(--header-height);
+
+  /* Background */
+  background-color: var(--bg-surface-primary);
+
+  /* Decorations */
+  opacity: 0;
+  visibility: hidden;
+
+  /* Interaction */
+  pointer-events: none;
+
+  /* Transition */
+  transition: all 0.4s ease;
+}
+
+/* Активное состояние мобильного меню */
+.menu_container.active {
+  /* Decorations */
+  opacity: 1;
+  visibility: visible;
+
+  /* Interaction */
+  pointer-events: all;
+}
+
+/* =================================================================
+   УРОВЕНЬ 5: СПИСКИ ПУНКТОВ МЕНЮ
+   ================================================================= */
+
+/* Список пунктов меню */
+.menu {
+  /* Display & Flow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+/* Пункт меню - ссылка */
+.menu a {
+  /* Display & Flow */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  /* Transition */
+  transition: color 0.3s;
+}
+
+/* Состояние наведения на пункт меню */
+.menu a:hover {
+  /* Color */
+  color: var(--text-accent);
+}
+
+/* SVG иконка в пункте меню */
+.menu a svg {
+  /* Display & Flow */
+  display: block;
+
+  /* Font */
+  font-size: 0.9em;
+
+  /* Transition */
+  transition: transform 0.3s ease;
+}
+
+/* Анимация иконки при наведении */
+.menu a:hover svg {
+  /* Transform */
+  transform: translateX(5px);
+}
+
+/* =================================================================
+   УРОВЕНЬ 6: КНОПКА КОНТАКТОВ
+   ================================================================= */
+
+/* Контейнер кнопки контактов (скрыт на мобилке) */
+.contact_container.desktop_only {
+  /* Display & Flow */
+  display: none;
+}
+
+/* Видимость элементов только на мобилке */
+.mobile_only {
+  /* Display & Flow */
+  display: inline-flex !important;
+}
+
+/* Кнопка связаться с градиентной границей */
+.btn_contact {
+  /* Display & Flow */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+
+  /* Padding & Margin */
+  padding: var(--spacing-xxs) var(--spacing-sm);
+
+  /* Border */
+  border: 2px solid transparent;
+  border-radius: var(--radius-default);
+
+  /* Background */
+  background-image:
+    linear-gradient(to right, var(--bg-surface-secondary), var(--bg-surface-secondary)),
+    linear-gradient(45deg, var(--interactive-accent-primary), var(--interactive-gradient-end));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  font-weight: 900;
+  text-decoration: none;
+
+  /* Decorations */
+  box-shadow: 0 0 20px var(--shadow-color-accent);
+
+  /* Transition */
+  transition: all 0.3s ease;
+}
+
+/* Состояние наведения на кнопку контактов */
+.btn_contact:hover {
+  /* Background */
+  background-color: var(--bg-surface-secondary);
+
+  /* Color */
+  color: var(--interactive-accent-primary);
+
+  /* Decorations */
+  box-shadow: 0 0 25px var(--shadow-color-hover);
+}
+
+/* SVG иконка в кнопке контактов */
+.btn_contact svg {
+  /* Display & Flow */
+  display: inline-block;
+
+  /* Transition */
+  transition: transform 0.4s ease;
+}
+
+/* Увеличение иконки при наведении */
+.btn_contact:hover svg {
+  /* Transform */
+  transform: scale(1.4);
+}
+
+/* =================================================================
+   УРОВЕНЬ 7: ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ
+   ================================================================= */
+
+/* Контейнер переключателя языков */
+.lang_switcher {
+  /* Display & Flow */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  gap: var(--spacing-xs);
+
+  /* Font */
+  font-size: var(--font-size-body-xs);
+  font-weight: 500;
+}
+
+/* Ссылка переключения языка */
+.lang_link {
+  /* Color */
+  color: var(--text-primary);
+
+  /* Font */
+  text-decoration: none;
+
+  /* Transition */
+  transition: color 0.3s ease;
+}
+
+/* Активный язык */
+.lang_link.active {
+  /* Color */
+  color: var(--interactive-accent-primary);
+
+  /* Font */
+  font-size: var(--font-size-body-md);
+  font-weight: 700;
+}
+
+/* Состояние наведения на ссылку языка */
+.lang_link:hover {
+  /* Color */
+  color: var(--text-primary);
+}
+
+/* =================================================================
+   АДАПТИВНЫЕ СТИЛИ (DESKTOP - 992px и выше)
+   ================================================================= */
+
+@media (min-width: 992px) {
+  /* Логотип на десктопе */
+  .logo_container {
+    /* Display & Flow */
+    flex-grow: 0;
+  }
+
+  /* Скрытие кнопки бургер на десктопе */
+  .burger_btn {
+    /* Display & Flow */
+    display: none;
+  }
+
+  /* Скрытие мобильных элементов на десктопе */
+  .mobile_only {
+    /* Display & Flow */
+    display: none !important;
+  }
+
+  /* Десктопное меню */
+  .menu_container {
+    /* Position */
+    position: static;
+
+    /* Display & Flow */
+    display: block;
+
+    /* Dimensions */
+    width: auto;
+    height: auto;
+
+    /* Padding & Margin */
+    padding: 0;
+
+    /* Background */
+    background-color: transparent;
+
+    /* Decorations */
+    opacity: 1;
+    visibility: visible;
+
+    /* Interaction */
+    pointer-events: all;
+  }
+
+  /* Горизонтальное расположение пунктов меню */
+  .menu {
+    /* Display & Flow */
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+
+  /* Пункт меню на десктопе */
+  .menu a {
+    /* Font */
+    font-size: 1rem;
+  }
+
+  /* Контейнер кнопки контактов на десктопе */
+  .contact_container.desktop_only {
+    /* Display & Flow */
+    display: block;
+    flex-grow: 0;
+
+    /* Font */
+    text-align: right;
+  }
+}

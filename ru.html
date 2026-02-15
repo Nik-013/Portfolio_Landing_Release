@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta name="robots" content="index, follow">
+  <meta property="og:url" content="https://nik-portfolio.netlify.app/ru.html"> <!-- Сюда потом вставить реальную ссылку -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NIK.DEV - Портфолио Frontend Разработчика">
+  <meta name="twitter:description" content="Разработка масштабируемых веб-интерфейсов.">
+  <meta name="twitter:image" content="img/content/portfolio.png">
+
+  <meta property="og:title" content="NIK.DEV - Портфолио Frontend Разработчика">
+  <meta property="og:description" content="Разработка масштабируемых веб-интерфейсов.">
+  <meta property="og:image" content="https://nik-portfolio.netlify.app/public/img/content/portfolio.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Портфолио Frontend разработчика." />
+
+  <meta name="msapplication-TileColor" content="#0b001a">
+  <meta name="theme-color" content="#0b001a">
+
+  <link rel="icon" type="image/png" href="public/img/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="public/img/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="public/img/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="public/img/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="public/img/favicons/site.webmanifest" />
+
+  <title>NIK.DEV</title>
+
+  <link rel="canonical" href="https://nik-portfolio.netlify.app/">
+
+  <link rel="preload" href="styles/base.css" as="style">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/skills.css">
+  <link rel="stylesheet" href="styles/portfolio.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/modal.css">
+
+
+</head>
+
+<body id="home">
+
+  <a href="#about" class="skip_link">К контенту</a>
+
+  <div class="container">
+
+    <div class="header_patch"></div>
+
+    <header class="header">
+      <div class="logo_container">
+        <a href="#home" class="logo" aria-label="NIK.DEV">
+          <span>NIK.DEV</span>
+        </a>
+      </div>
+      <div class="menu_container" id="menuContainer">
+        <nav class="menu" aria-label="Основная навигация">
+          <a href="#about">
+            Обо мне
+            <svg class="icon_ui" aria-hidden="true">
+              <use href="public/img/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <a href="#portfolio">
+            Портфолио
+            <svg class="icon_ui" aria-hidden="true">
+              <use href="public/img/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <a href="#skills">
+            Навыки
+            <svg class="icon_ui" aria-hidden="true">
+              <use href="public/img/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <a class="btn_contact mobile_only js_email" href="#" aria-label="Связаться со мной">
+            Связаться
+            <svg class="icon_ui" aria-hidden="true">
+              <use href="public/img/sprite/sprite.svg#send_email"></use>
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <div class="lang_switcher" aria-label="Language switcher">
+        <a href="index.html" class="lang_link">EN</a>
+        <span aria-hidden="true">|</span>
+        <a href="ru.html" class="lang_link active" aria-current="page">RU</a>
+      </div>
+
+      <div class="contact_container desktop_only">
+        <a class="btn_contact js_email" href="#" aria-label="Связаться со мной">
+          Связаться
+          <svg class="icon_ui" aria-hidden="true">
+            <use href="public/img/sprite/sprite.svg#send_email"></use>
+          </svg>
+        </a>
+      </div>
+
+      <button class="burger_btn" aria-label="Открыть меню" aria-controls="menuContainer" aria-expanded="false">
+        <svg class="icon_ui icon-bars" aria-hidden="true">
+          <use href="public/img/sprite/sprite.svg#icon-menu"></use>
+        </svg>
+        <svg class="icon_ui icon-close" aria-hidden="true">
+          <use href="public/img/sprite/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+    </header>
+
+    <main>
+
+      <section id="about" class="section_intro" aria-labelledby="head_intro">
+        <div class="wrapper_intro">
+          <picture>
+            <source srcset="public/img/content/avatar.avif" type="image/avif">
+            <source srcset="public/img/content/avatar.webp" type="image/webp">
+            <img class="img_intro" src="public/img/content/avatar.png" width="1024" height="1024" fetchpriority="high"
+              alt="Аватар разработчика">
+          </picture>
+          <div class="text_intro_container">
+            <h1 id="head_intro" class="head_intro">
+              Разработка масштабируемых веб-интерфейсов.
+            </h1>
+            <p class="text_intro">
+              Специализируюсь на <strong>семантическом HTML5</strong>, современной <strong>архитектуре CSS</strong> и
+              <strong>нативном JavaScript (Vanilla JS)</strong>.
+              Превращаю сложные макеты Figma в чистый, поддерживаемый и производительный код.
+              Акцент на доступности (A11y) и методологии Mobile First.
+            </p>
+            <p class="status_intro">Открыт для предложений.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section_portfolio" aria-labelledby="portfolio_title">
+        <h2 id="portfolio_title" class="section_title_portfolio">Портфолио</h2>
+
+        <div class="projects_grid">
+
+          <article id="work_portfolio" class="project_card portfolio_neon" aria-labelledby="portfolio_title_1">
+
+            <div class="project_header">
+              <h3 id="portfolio_title_1">Шаблон портфолио</h3>
+            </div>
+
+            <div class="project_media_wrapper" tabindex="0">
+              <picture>
+                <source srcset="public/img/content/portfolio.avif" type="image/avif">
+                <source srcset="public/img/content/portfolio.webp" type="image/webp">
+
+                <img src="public/img/content/portfolio-low.png" data-full="public/img/content/portfolio.png" width="800" height="1395" loading="lazy" alt="Превью сайта портфолио"
+
+                  data-gallery="public/img/content/portfolio.png, public/img/content/portfolio-tablet.png, public/img/content/portfolio-mobile.png"/>
+
+              </picture>
+
+              <a href="https://github.com/Nik-013/Portfolio_Landing" target="_blank" rel="noopener noreferrer"
+                class="project_link" aria-label="Код проекта на GitHub (откроется в новой вкладке)">
+                <svg class="icon_ui" aria-hidden="true">
+                  <use href="public/img/sprite/sprite.svg#icon-github"></use>
+                </svg>
+                Код проекта
+              </a>
+            </div>
+
+            <div class="project_text">
+              <p>
+                Личный сайт с фокусом на производительность. Создан на семантической разметке,
+                кастомных свойствах CSS (переменных) и оптимизированных ассетах.
+                Lighthouse score: 100/100.
+              </p>
+            </div>
+
+          </article>
+
+          <article id="work_1" class="project_card development" aria-labelledby="portfolio_title_2">
+
+            <div class="project_header">
+              <h3 id="portfolio_title_2">Адаптивный фэнтези‑лендинг</h3>
+            </div>
+
+            <div class="project_media_wrapper">
+              <picture>
+                <source srcset="public/img/content/fantasy.avif" type="image/avif">
+                <source srcset="public/img/content/fantasy.webp" type="image/webp">
+
+                <img src="public/img/content/fantasy-low.png" data-full="public/img/content/fantasy.png" width="800" height="1762"
+                  loading="lazy" alt="Лендинг в стиле фэнтези" />
+              </picture>
+
+              <span class="project_status">В разработке</span>
+            </div>
+
+            <div class="project_text">
+              <p>
+                Детальная реализация UI с эффектами параллакса и сложными
+                CSS-анимациями. Демонстрация верстки без использования
+                тяжелых фреймворков.
+              </p>
+            </div>
+          </article>
+
+          <article id="work_2" class="project_card development" aria-labelledby="portfolio_title_3">
+
+            <div class="project_header">
+              <h3 id="portfolio_title_3">Агрегатор современной арт‑галереи</h3>
+            </div>
+
+            <div class="project_media_wrapper">
+              <picture>
+                <source srcset="public/img/content/design.avif" type="image/avif">
+                <source srcset="public/img/content/design.webp" type="image/webp">
+
+                <img src="public/img/content/design-low.png" data-full="public/img/content/design.png" width="800" height="1056"
+                  loading="lazy" alt="Дизайн страницы арт-галереи" />
+              </picture>
+              <span class="project_status">В разработке</span>
+            </div>
+
+            <div class="project_text">
+              <p>
+                Макет на основе сетки (Grid), сфокусированный на визуальной иерархии и типографике.
+                Реализует продвинутые техники CSS Grid для журнальной верстки.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills" class="section_skills" role="region" aria-labelledby="skills_title">
+
+        <h2 id="skills_title" class="section_title_skills">Навыки</h2>
+
+        <div class="skills_grid">
+
+          <article id="skills_html" class="skills html">
+            <div class="skills_icon">
+              <svg class="icon_ui" role="img" aria-label="HTML logo">
+                <use href="public/img/sprite/sprite.svg#icon-html"></use>
+              </svg>
+            </div>
+            <div class="skills_header">
+              <h3>HTML</h3>
+            </div>
+            <span class="skills_text">
+              Семантика и SEO
+            </span>
+          </article>
+
+          <article id="skills_css" class="skills css">
+            <div class="skills_icon">
+              <svg class="icon_ui" role="img" aria-label="CSS logo">
+                <use href="public/img/sprite/sprite.svg#icon-css"></use>
+              </svg>
+            </div>
+            <div class="skills_header">
+              <h3>CSS</h3>
+            </div>
+            <span class="skills_text">
+              Flexbox, Grid, BEM и Анимации
+            </span>
+          </article>
+
+          <article id="skills_js" class="skills js">
+            <div class="skills_icon">
+              <svg class="icon_ui" role="img" aria-label="JS logo">
+                <use href="public/img/sprite/sprite.svg#icon-js"></use>
+              </svg>
+            </div>
+            <div class="skills_header">
+              <h3>JS</h3>
+            </div>
+            <span class="skills_text">
+              ES6+, работа с DOM и API 
+            </span>
+          </article>
+
+          <article id="skills_figma" class="skills figma">
+            <div class="skills_icon">
+              <svg class="icon_ui" role="img" aria-label="Figma logo">
+                <use href="public/img/sprite/sprite.svg#icon-figma"></use>
+              </svg>
+            </div>
+            <div class="skills_header">
+              <h3>Figma</h3>
+            </div>
+            <span class="skills_text">
+              Дизайн‑системы и передача макетов
+            </span>
+          </article>
+
+          <article id="skills_git" class="skills git">
+            <div class="skills_icon">
+              <svg class="icon_ui" role="img" aria-label="Git logo">
+                <use href="public/img/sprite/sprite.svg#icon-git"></use>
+              </svg>
+            </div>
+            <div class="skills_header">
+              <h3>Git</h3>
+            </div>
+            <span class="skills_text">
+              Контроль версий и основы CI/CD
+            </span>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer_minimal">
+      <div class="footer_message">
+        <h2>Готовы создать что-то уникальное?</h2>
+        <span id="footerStatus" class="status_footer" aria-live="polite"></span>
+      </div>
+      <div class="footer_meta">
+        <span class="copyright">&copy; <span id="currentYear"></span>NIK.DEV. Все права защищены.</span>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script type="module" src="js/main.js"></script>
+  <script defer src="js/scroll.js"></script>
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/popup.js"></script>
+  <script defer src="js/status.js"></script>
+  <script defer src="js/protect.js"></script>
+
+  <div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+    aria-describedby="modalImg">
+
+    <h2 id="modalTitle" class="sr_only">Просмотр изображения</h2>
+
+    <button class="modal_nav_btn modal_prev" aria-label="Предыдущее изображение" aria-controls="modalImg">
+      <svg class="icon_ui" aria-hidden="true">
+        <use href="public/img/sprite/sprite.svg#circle-arrow-left"></use>
+      </svg>
+    </button>
+
+    <button class="modal_nav_btn modal_next" aria-label="Следующее изображение" aria-controls="modalImg">
+      <svg class="icon_ui" aria-hidden="true">
+        <use href="public/img/sprite/sprite.svg#circle-arrow-right"></use>
+      </svg>
+    </button>
+
+    <button class="close_modal" aria-label="Закрыть модальное окно">
+      <svg class="icon_ui icon_close" aria-hidden="true">
+        <use href="public/img/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <img id="modalImg" class="modal_content" alt="Cкриншот проекта"/>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow"> <!-- Ошибку не индексируем -->
+    <title>404 - Page Not Found | NIK.DEV</title>
+
+    <link rel="icon" href="img/favicons/favicon.ico" />
+    <link rel="stylesheet" href="styles/base.css">
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .error_container main {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 8rem);
+            color: var(--text-accent);
+            margin: 0;
+            line-height: 1;
+            text-shadow: 0 0 30px var(--palette-accent-purple-700);
+        }
+
+        p {
+            font-size: var(--font-size-h3);
+            color: var(--text-primary);
+            max-width: 500px;
+        }
+
+        span {
+            font-size: var(--font-size-body-lg);
+            opacity: 0.8;
+        }
+
+        .btn_home {
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-lg);
+            border: 2px solid var(--border-decorative);
+
+            /* Visual */
+            background-color: var(--interactive-accent-primary);
+            border-radius: var(--radius-default);
+            box-shadow: 0 0 15px var(--shadow-color-accent);
+
+            /* Typography */
+            color: var(--text-on-interactive);
+            text-decoration: none;
+            font-size: var(--font-size-body-md);
+            font-weight: 500;
+
+            /* Animation */
+            transition: background 0.3s ease, transform 0.3s ease;
+            }
+
+            .btn_home:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px var(--shadow-color-hover);
+            }
+    </style>
+</head>
+
+<body>
+    <main class="error_container">
+        <h1 role="heading" aria-level="1">404</h1>
+        <p role="alert">
+            Oops! Page not found.<br>
+            <span>Упс! Страница не найдена.</span>
+        </p>
+        <div>
+            <a href="index.html" class="btn_home" aria-label="Go to homepage">Home / Главная</a>
+        </div>
+    </main>
+</body>
+
+</html>
