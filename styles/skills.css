@@ -14,7 +14,7 @@
   /* Background */
   background-color: var(--bg-surface-secondary);
 
-  /* Color */
+  /* Font */
   color: var(--text-primary);
 }
 
@@ -27,10 +27,8 @@
   /* Padding & Margin */
   padding-bottom: var(--spacing-md);
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--font-size-h2);
   font-weight: 700;
   text-align: left;
@@ -76,10 +74,8 @@
   /* Background */
   background-color: transparent;
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   text-align: center;
 
   /* Decorations */
@@ -152,10 +148,8 @@
 
 /* Название навыка */
 .skills_header h3 {
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--font-size-body-lg);
   font-weight: 500;
 }
@@ -176,10 +170,8 @@
   /* Padding & Margin */
   padding: 0 var(--spacing-md);
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--font-size-body-sm);
   font-weight: 300;
   text-align: center;

@@ -65,10 +65,8 @@ header.scrolled {
 
 /* Ссылка логотипа */
 .logo {
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -97,10 +95,8 @@ header.scrolled {
   /* Background */
   background: none;
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--icon-size);
 
   /* Interaction */
@@ -112,7 +108,7 @@ header.scrolled {
 
 /* Активное состояние кнопки бургер */
 .burger_btn.active {
-  /* Color */
+  /* Font */
   color: var(--text-on-inverted-accent);
 }
 
@@ -207,10 +203,8 @@ header.scrolled {
   align-items: center;
   gap: var(--spacing-xs);
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: 1.5rem;
   font-weight: 500;
   text-decoration: none;
@@ -221,7 +215,7 @@ header.scrolled {
 
 /* Состояние наведения на пункт меню */
 .menu a:hover {
-  /* Color */
+  /* Font */
   color: var(--text-accent);
 }
 
@@ -280,10 +274,8 @@ header.scrolled {
   background-origin: border-box;
   background-clip: padding-box, border-box;
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-weight: 900;
   text-decoration: none;
 
@@ -299,7 +291,7 @@ header.scrolled {
   /* Background */
   background-color: var(--bg-surface-secondary);
 
-  /* Color */
+  /* Font */
   color: var(--interactive-accent-primary);
 
   /* Decorations */
@@ -341,10 +333,9 @@ header.scrolled {
 
 /* Ссылка переключения языка */
 .lang_link {
-  /* Color */
-  color: var(--text-primary);
 
   /* Font */
+  color: var(--text-primary);
   text-decoration: none;
 
   /* Transition */
@@ -353,17 +344,15 @@ header.scrolled {
 
 /* Активный язык */
 .lang_link.active {
-  /* Color */
-  color: var(--interactive-accent-primary);
-
   /* Font */
+  color: var(--interactive-accent-primary);
   font-size: var(--font-size-body-md);
   font-weight: 700;
 }
 
 /* Состояние наведения на ссылку языка */
 .lang_link:hover {
-  /* Color */
+  /* Font */
   color: var(--text-primary);
 }
 

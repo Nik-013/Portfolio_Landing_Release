@@ -177,9 +177,9 @@ body {
   min-height: 100vh;
 
   /* Font */
-  font-family: "Montserrat", sans-serif;
   color: var(--text-primary);
-
+  font-family: "Montserrat", sans-serif;
+  
   /* Background */
   background-color: var(--bg-surface-primary);
 
@@ -312,10 +312,8 @@ body.lock {
   /* Border */
   border-radius: var(--spacing-xxs);
 
-  /* Color */
-  color: var(--text-on-interactive);
-
   /* Font */
+  color: var(--text-on-interactive);
   text-decoration: none;
 
   /* Transition */

@@ -34,10 +34,8 @@
 
 /* Заголовок футера */
 .footer_message h2 {
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--font-size-h3);
   font-weight: 500;
 }
@@ -51,10 +49,8 @@
   /* Decorations */
   opacity: 1;
 
-  /* Color */
-  color: var(--text-accent);
-
   /* Font */
+  color: var(--text-accent);
   font-size: var(--font-size-body-lg);
   font-weight: 500;
 }
@@ -68,7 +64,7 @@
   /* Decorations */
   opacity: 0.6;
 
-  /* Color */
+  /* Font */
   color: var(--text-primary);
 }
 

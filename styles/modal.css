@@ -77,10 +77,8 @@
   /* Background */
   background: transparent;
 
-  /* Color */
-  color: var(--text-on-inverted-accent);
-
   /* Font */
+  color: var(--text-on-inverted-accent);
   font-size: var(--font-size-h3);
 
   /* Decorations */
@@ -97,7 +95,7 @@
 
 /* Состояние наведения на кнопку закрытия */
 .close_modal:hover {
-  /* Color */
+  /* Font */
   color: var(--interactive-accent-primary);
 
   /* Transform */
@@ -136,18 +134,15 @@
 
   /* Border */
   border: 1px solid var(--border-decorative);
-  border-radius: 50%;
-  /* круглая форма */
+  border-radius: 50%; /* круглая форма */
 
   /* Background */
   background-color: var(--bg-surface-primary);
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--font-size-h1);
-
+  
   /* Interaction */
   cursor: pointer;
 
@@ -163,9 +158,11 @@
   /* Background */
   background-color: var(--interactive-accent-primary);
 
-  /* Color */
-  color: var(--text-on-inverted-primary);
+  /* Border */
   border-color: var(--interactive-accent-primary);
+
+  /* Font */
+  color: var(--text-on-inverted-primary);
 }
 
 /* Фокус для доступности */

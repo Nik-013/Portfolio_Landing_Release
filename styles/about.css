@@ -107,10 +107,8 @@
   /* Padding & Margin */
   margin-bottom: var(--spacing-md);
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--font-size-body-lg);
 }
 
@@ -123,10 +121,8 @@
   /* Padding & Margin */
   margin-bottom: var(--spacing-sm);
 
-  /* Color */
-  color: var(--text-primary);
-
   /* Font */
+  color: var(--text-primary);
   font-size: var(--font-size-body-md);
   line-height: 1.8;
 }
@@ -140,10 +136,8 @@
   /* Padding & Margin */
   margin-bottom: var(--spacing-md);
 
-  /* Color */
-  color: var(--text-accent);
-
   /* Font */
+  color: var(--text-accent);
   font-size: var(--font-size-body-lg);
   font-weight: 700;
 }
