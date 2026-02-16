@@ -244,6 +244,11 @@
     // Вешаем "Enter" на карточки (для навигации клавиатурой)
     focusableCards.forEach(card => {
         card.addEventListener('keydown', (e) => {
+             // Если цель нажатия - ссылка на проект, то ничего не делаем и выходим.
+            if (e.target.closest('.project_link')) {
+                return; 
+            }
+            
             if ((e.key === 'Enter' || e.key === ' ') && !card.closest('.development')) {
                 e.preventDefault(); // Запрещаем стандартное действие пробела (прокрутку страницы)
                 const img = card.querySelector('img'); // Находим картинку внутри карточки
