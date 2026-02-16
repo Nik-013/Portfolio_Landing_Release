@@ -168,7 +168,7 @@
         modal.style.display = "none";               // Прячем
         body.classList.remove('lock');              // Разрешаем скролл
         modal.setAttribute('aria-hidden', 'true');
-        modalImg.src = "";                          // Убираем картинку из памяти
+        modalImg.removeAttribute('src');            // Убираем картинку из памяти
         modalImg.onerror = null;                    // Убираем слушатели ошибок
         
         // Возвращаем фокус туда, где он был до открытия (удобно при навигации Tab'ом)

@@ -40,8 +40,8 @@
 
   /* Dimensions */
   width: auto;
-  height: auto;
   max-width: 90%;
+  height: auto;
 
   /* Padding & Margin */
   margin: auto;
@@ -105,8 +105,8 @@
 /* Фокус для доступности */
 .close_modal:focus-visible {
   /* Border */
-  outline: 2px solid var(--interactive-accent-primary);
   border-radius: 5px;
+  outline: 2px solid var(--interactive-accent-primary);
 }
 
 /* =================================================================
@@ -115,15 +115,15 @@
 
 /* Кнопки навигации для пролистывания изображений (слева/справа) */
 .modal_nav_btn {
+  /* Display & Flow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   /* Position */
   position: fixed;
   top: 50%;
   z-index: var(--z-modal-close);
-
-  /* Display & Flow */
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   /* Dimensions */
   width: 50px;
@@ -146,20 +146,20 @@
   /* Interaction */
   cursor: pointer;
 
-  /* Transform */
-  transform: translateY(-50%);
-
   /* Transition */
   transition: all 0.3s ease;
+
+  /* Transform */
+  transform: translateY(-50%);
 }
 
 /* Состояние наведения на кнопку навигации */
 .modal_nav_btn:hover {
-  /* Background */
-  background-color: var(--interactive-accent-primary);
-
   /* Border */
   border-color: var(--interactive-accent-primary);
+
+  /* Background */
+  background-color: var(--interactive-accent-primary);
 
   /* Font */
   color: var(--text-on-inverted-primary);

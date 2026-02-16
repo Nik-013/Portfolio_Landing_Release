@@ -4,17 +4,17 @@
 
 /* Фиксированный хедер с центрированием */
 header {
-  /* Position */
-  position: fixed;
-  top: var(--spacing-md);
-  left: 50%;
-  z-index: var(--z-header);
-
   /* Display & Flow */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--spacing-lg);
+
+  /* Position */
+  position: fixed;
+  top: var(--spacing-md);
+  left: 50%;
+  z-index: var(--z-header);
 
   /* Dimensions */
   width: calc(100% - (var(--spacing-md) * 2));
@@ -30,15 +30,15 @@ header {
   /* Background */
   background-color: var(--bg-surface-secondary);
 
-  /* Decorations */
-  will-change: transform;
-  backface-visibility: hidden;
-
   /* Transition */
   transition: box-shadow 0.3s ease, border-radius 0.3s ease;
 
   /* Transform */
   transform: translateX(-50%);
+
+  /* Decorations */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Хедер с появлением тени при скролле */
@@ -83,11 +83,10 @@ header.scrolled {
 
 /* Кнопка открытия/закрытия мобильного меню */
 .burger_btn {
-  /* Position */
-  z-index: var(--z-burger);
-
   /* Display & Flow */
   display: block;
+  /* Position */
+  z-index: var(--z-burger);
 
   /* Border */
   border: none;
@@ -139,17 +138,17 @@ header.scrolled {
 
 /* Мобильное меню (шторка) */
 .menu_container {
+  /* Display & Flow */
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
   /* Position */
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-menu);
-
-  /* Display & Flow */
-  display: flex;
-  flex-direction: column;
-  justify-content: normal;
-  align-items: center;
 
   /* Dimensions */
   width: 100%;
@@ -164,7 +163,6 @@ header.scrolled {
 
   /* Decorations */
   opacity: 0;
-  visibility: hidden;
 
   /* Interaction */
   pointer-events: none;
@@ -175,9 +173,9 @@ header.scrolled {
 
 /* Активное состояние мобильного меню */
 .menu_container.active {
+  visibility: visible;
   /* Decorations */
   opacity: 1;
-  visibility: visible;
 
   /* Interaction */
   pointer-events: all;
@@ -321,9 +319,9 @@ header.scrolled {
 .lang_switcher {
   /* Display & Flow */
   display: flex;
+  flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
-  flex-grow: 1;
   gap: var(--spacing-xs);
 
   /* Font */
@@ -333,7 +331,6 @@ header.scrolled {
 
 /* Ссылка переключения языка */
 .lang_link {
-
   /* Font */
   color: var(--text-primary);
   text-decoration: none;
@@ -381,11 +378,11 @@ header.scrolled {
 
   /* Десктопное меню */
   .menu_container {
-    /* Position */
-    position: static;
-
     /* Display & Flow */
     display: block;
+    visibility: visible;
+    /* Position */
+    position: static;
 
     /* Dimensions */
     width: auto;
@@ -399,7 +396,6 @@ header.scrolled {
 
     /* Decorations */
     opacity: 1;
-    visibility: visible;
 
     /* Interaction */
     pointer-events: all;

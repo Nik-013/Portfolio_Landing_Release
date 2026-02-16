@@ -24,9 +24,6 @@
   /* Padding & Margin */
   padding-bottom: var(--spacing-md);
 
-  /* Color */
-  
-
   /* Font */
   color: var(--text-on-inverted-primary);
   font-size: var(--font-size-h2);
@@ -42,8 +39,7 @@
 .projects_grid {
   /* Display & Flow */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* адаптивные столбцы от 250px */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/* адаптивные столбцы от 250px */
   gap: var(--spacing-xl);
 }
 
@@ -109,11 +105,14 @@
 
 /* Название проекта с ограничением на 3 строки */
 .project_header h3 {
-  /* Padding & Margin */
-  margin: 0;
+  /* Display & Flow */
+  display: -webkit-box;
 
   /* Dimensions */
   width: 100%;
+
+  /* Padding & Margin */
+  margin: 0;
 
   /* Font */
   color: var(--text-on-inverted-secondary);
@@ -124,7 +123,6 @@
   /* Text overflow */
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   /* обрезка текста */
@@ -181,8 +179,8 @@
 .project_text {
   /* Display & Flow */
   display: flex;
-  align-items: center;
   flex-grow: 1;
+  align-items: center;
 
   /* Padding & Margin */
   padding: var(--spacing-xs) var(--spacing-xs) 0 var(--spacing-xs);
@@ -190,6 +188,8 @@
 
 /* Описание проекта с ограничением на 10 строк */
 .project_text p {
+  /* Display & Flow */
+  display: -webkit-box;
   /* Font */
   color: var(--text-on-inverted-primary);
   font-size: var(--font-size-body-sm);
@@ -198,7 +198,6 @@
   /* Text overflow */
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10;
   /* обрезка текста */
@@ -213,8 +212,8 @@
 .project_link {
   /* Position */
   position: absolute;
-  bottom: var(--spacing-md);
   right: var(--spacing-md);
+  bottom: var(--spacing-md);
 
   /* Padding & Margin */
   padding: var(--spacing-xs) var(--spacing-lg);
@@ -249,8 +248,8 @@
 .project_status {
   /* Position */
   position: absolute;
-  bottom: var(--spacing-md);
   right: var(--spacing-md);
+  bottom: var(--spacing-md);
 
   /* Padding & Margin */
   padding: var(--spacing-xs) var(--spacing-lg);
@@ -294,7 +293,6 @@
 
 /* Увеличение взаимодействия при наведении (только для устройств с мышью) */
 @media (hover: hover) {
-
   /* Карточка проекта: поднятие и подсветка при наведении */
   .project_card:hover {
     /* Decorations */

@@ -1,74 +1,43 @@
 /* =================================================================
    УРОВЕНЬ 1: ПОДКЛЮЧЕНИЕ ШРИФТОВ
    ================================================================= */
-
-/* Montserrat 300 - Light */
 @font-face {
-  /* Font */
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 300;
-
-  /* Font loading */
+  font-style: normal;
   font-display: swap;
-
-  /* Source */
   src: url('../public/fonts/montserrat-v31-cyrillic_latin-300.woff2') format('woff2');
 }
 
-/* Montserrat 400 - Regular */
 @font-face {
-  /* Font */
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 400;
-
-  /* Font loading */
+  font-style: normal;
   font-display: swap;
-
-  /* Source */
   src: url('../public/fonts/montserrat-v31-cyrillic_latin-regular.woff2') format('woff2');
 }
 
-/* Montserrat 500 - Medium */
 @font-face {
-  /* Font */
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 500;
-
-  /* Font loading */
+  font-style: normal;
   font-display: swap;
-
-  /* Source */
   src: url('../public/fonts/montserrat-v31-cyrillic_latin-500.woff2') format('woff2');
 }
 
-/* Montserrat 700 - Bold */
 @font-face {
-  /* Font */
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 700;
-
-  /* Font loading */
+  font-style: normal;
   font-display: swap;
-
-  /* Source */
   src: url('../public/fonts/montserrat-v31-cyrillic_latin-700.woff2') format('woff2');
 }
 
-/* Montserrat 900 - Black */
 @font-face {
-  /* Font */
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 900;
-
-  /* Font loading */
+  font-style: normal;
   font-display: swap;
-
-  /* Source */
   src: url('../public/fonts/montserrat-v31-cyrillic_latin-900.woff2') format('woff2');
 }
 
@@ -175,13 +144,13 @@ html,
 body {
   /* Dimensions */
   min-height: 100vh;
+  
+  /* Background */
+  background-color: var(--bg-surface-primary);
 
   /* Font */
   color: var(--text-primary);
   font-family: "Montserrat", sans-serif;
-  
-  /* Background */
-  background-color: var(--bg-surface-primary);
 
   /* Behavior */
   scroll-behavior: smooth;
@@ -268,8 +237,8 @@ body.lock {
 /* Фокус для доступности (видимое обводка при фокусе) */
 :focus-visible {
   /* Border */
-  outline: 3px solid var(--interactive-accent-dark);
   border-radius: var(--radius-default);
+  outline: 3px solid var(--interactive-accent-dark);
   outline-offset: var(--spacing-xxs);
 }
 
@@ -306,11 +275,11 @@ body.lock {
   /* Padding & Margin */
   padding: var(--spacing-xxs);
 
-  /* Background */
-  background: var(--interactive-accent-primary);
-
   /* Border */
   border-radius: var(--spacing-xxs);
+
+  /* Background */
+  background: var(--interactive-accent-primary);
 
   /* Font */
   color: var(--text-on-interactive);
@@ -357,38 +326,38 @@ svg.icon_ui {
 /* Поворот с появлением (для бургера и кнопки закрытия модала) */
 @keyframes rotateEntrance {
   from {
-    /* Transform */
-    transform: rotate(-90deg);
 
     /* Decorations */
     opacity: 0;
+    /* Transform */
+    transform: rotate(-90deg);
   }
 
   to {
-    /* Transform */
-    transform: rotate(0deg);
 
     /* Decorations */
     opacity: 1;
+    /* Transform */
+    transform: rotate(0deg);
   }
 }
 
 /* Масштабирование с появлением (для контента модального окна) */
 @keyframes zoomIn {
   from {
-    /* Transform */
-    transform: scale(0.9);
 
     /* Decorations */
     opacity: 0;
+    /* Transform */
+    transform: scale(0.9);
   }
 
   to {
-    /* Transform */
-    transform: scale(1);
 
     /* Decorations */
     opacity: 1;
+    /* Transform */
+    transform: scale(1);
   }
 }
 
