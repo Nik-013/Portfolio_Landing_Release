@@ -114,12 +114,19 @@
 
       <section id="about" class="section_intro" aria-labelledby="head_intro">
         <div class="wrapper_intro">
+
           <picture>
-            <source srcset="img/content/avatar.avif" type="image/avif">
-            <source srcset="img/content/avatar.webp" type="image/webp">
-            <img class="img_intro" src="img/content/avatar.png" width="1024" height="1024" fetchpriority="high"
+
+            <source media="(max-width: 512px)" srcset="img/content/mobile/avatar-low.avif" type="image/avif">
+            <source media="(max-width: 512px)" srcset="img/content/mobile/avatar-low.webp" type="image/webp">
+            <source media="(min-width: 512px)" srcset="img/content/desktop/avatar-high.avif" type="image/avif">
+            <source media="(min-width: 512px)" srcset="img/content/desktop/avatar-high.webp" type="image/webp">
+
+            <img class="img_intro" src="img/content/desktop/avatar-high.png" width="1024" height="1024" fetchpriority="high" decoding="async" 
               alt="Developer avatar">
+
           </picture>
+
           <div class="text_intro_container">
             <h1 id="head_intro" class="head_intro">
               Building scalable web interfaces.
@@ -147,15 +154,20 @@
             </div>
 
             <div class="project_media_wrapper" tabindex="0">
+
               <picture>
-                <source srcset="img/content/portfolio.avif" type="image/avif">
-                <source srcset="img/content/portfolio.webp" type="image/webp">
 
-                <img src="img/content/portfolio-low.png" data-full="img/content/portfolio.png"
+                <source media="(max-width: 860px)" srcset="img/content/mobile/portfolio-preview-low.avif" type="image/avif">
+                <source media="(max-width: 860px)" srcset="img/content/mobile/portfolio-preview-low.webp" type="image/webp">
+                <source media="(min-width: 860px)" srcset="img/content/desktop/portfolio-preview-high.avif" type="image/avif">
+                <source media="(min-width: 860px)" srcset="img/content/desktop/portfolio-preview-high.webp" type="image/webp">
 
-                  data-gallery="img/content/portfolio.png, img/content/portfolio-tablet.png, img/content/portfolio-mobile.png" 
+                <img src="img/content/desktop/portfolio-preview-high.png" data-full="img/content/full/portfolio-high-pc.webp"
+
+                  data-gallery="img/content/full/portfolio-high-pc.webp, img/content/full/portfolio-low-tab.webp, img/content/full/portfolio-low-mob.webp" 
                   
-                  width="800" height="1395" loading="lazy" alt="My Portfolio Website Preview" />
+                  width="1280" height="2248" loading="lazy" decoding="async"  alt="My Portfolio Website Preview" />
+
               </picture>
 
               <a href="https://github.com/Nik-013/Portfolio_Landing" target="_blank" rel="noopener noreferrer"
@@ -184,12 +196,20 @@
             </div>
 
             <div class="project_media_wrapper">
-              <picture>
-                <source srcset="img/content/fantasy.avif" type="image/avif">
-                <source srcset="img/content/fantasy.webp" type="image/webp">
 
-                <img src="img/content/fantasy-low.png" data-full="img/content/fantasy.png" width="800" height="1762"
-                  loading="lazy" alt="Fantasy Landing Page" />
+              <picture>
+
+                <source media="(max-width: 860px)" srcset="img/content/mobile/fantasy-preview-low.avif" type="image/avif">
+                <source media="(max-width: 860px)" srcset="img/content/mobile/fantasy-preview-low.webp" type="image/webp">
+                <source media="(min-width: 860px)" srcset="img/content/desktop/fantasy-preview-high.avif" type="image/avif">
+                <source media="(min-width: 860px)" srcset="img/content/desktop/fantasy-preview-high.webp" type="image/webp">
+
+                <img src="img/content/desktop/fantasy-preview-high.png" data-full="img/content/full/fantasy-high-pc-en.webp"
+
+                  data-gallery="img/content/full/fantasy-high-pc-en.webp" 
+                  
+                  width="1280" height="2248" loading="lazy" decoding="async"  alt="Fantasy Landing Page" />
+
               </picture>
 
               <span class="project_status">Coming Soon</span>
@@ -212,12 +232,20 @@
 
             <div class="project_media_wrapper">
               <picture>
-                <source srcset="img/content/design.avif" type="image/avif">
-                <source srcset="img/content/design.webp" type="image/webp">
 
-                <img src="img/content/design-low.png" data-full="img/content/design.png" width="800" height="1056"
-                  loading="lazy" alt="Design Landing Page" />
+                <source media="(max-width: 860px)" srcset="img/content/mobile/design-preview-low.avif" type="image/avif">
+                <source media="(max-width: 860px)" srcset="img/content/mobile/design-preview-low.webp" type="image/webp">
+                <source media="(min-width: 860px)" srcset="img/content/desktop/design-preview-high.avif" type="image/avif">
+                <source media="(min-width: 860px)" srcset="img/content/desktop/design-preview-high.webp" type="image/webp">
+
+                <img src="img/content/desktop/design-preview-high.png" data-full="img/content/full/design-high-pc-en.webp"
+
+                  data-gallery="img/content/full/design-high-pc-en.webp" 
+                  
+                  width="1280" height="1690" loading="lazy" decoding="async"  alt="Design Landing Page" />
+
               </picture>
+
               <span class="project_status">Coming Soon</span>
             </div>
 
