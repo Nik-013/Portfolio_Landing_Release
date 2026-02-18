@@ -6,7 +6,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: url('../montserrat-v31-cyrillic_latin-300.woff2') format('woff2');
+  src: url('../fonts/montserrat-v31-cyrillic_latin-300.woff2') format('woff2');
 }
 
 @font-face {
