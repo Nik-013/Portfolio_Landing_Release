@@ -1,27 +1,35 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: '.',  // Точка означает, что корневая папка проекта — это текущая папка
-  
-  publicDir: 'public', // Указываем Vite, что папка со статикой (img) называется "public" (как у тебя на скрине)
-  
-  base: '/', // Указываем базовый путь для всех ресурсов (можно оставить пустым, если сайт будет на корне домена)
+  // Базовый путь. Точка в начале (./) помогает, если сайт лежит не в корне домена,
+  // но для Netlify лучше оставить '/' или auto.
+  base: '/', 
 
+  // Vite сам знает, где root и public, если ты не переименовывал папки.
+  // Лишние указания лучше убрать, чтобы не путать сборщик.
+  
   build: {
-    outDir: 'dist', // Куда соберется готовый проект
+    outDir: 'dist',
+    assetsDir: 'assets', // Складывать JS/CSS в assets
+    sourcemap: true,     // Полезно, чтобы видеть ошибки в коде на проде
+    emptyOutDir: true,   // Чистим папку dist перед сборкой
+    
     rollupOptions: {
+      // Явно указываем все HTML файлы, чтобы Vite их нашел
       input: {
-        // Перечисляем все HTML файлы, чтобы Vite их увидел
-        main: 'index.html',
-        ru: 'ru.html',
-        notfound: '404.html',
+        main: './index.html',
+        ru: './ru.html',
+        notfound: './404.html',
       },
     },
   },
-    server: {
-    open: true
+  
+  // Исправление для CSS
+  css: {
+    devSourcemap: true,
   },
-  css: { 
-    devSourcemap: false 
+  
+  server: {
+    open: true
   }
 });
