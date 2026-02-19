@@ -3,7 +3,7 @@
 
 <head>
   <meta name="robots" content="index, follow">
-  <meta property="og:url" content="https://nik-013-portfolio.netlify.app/"> <!-- Сюда потом вставить реальную ссылку -->
+  <meta property="og:url" content="https://nik-013-portfolio.vercel.app/"> <!-- Сюда потом вставить реальную ссылку -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NIK.DEV - Frontend Developer Portfolio">
   <meta name="twitter:description" content="Building scalable web interfaces.">
@@ -11,7 +11,7 @@
 
   <meta property="og:title" content="NIK.DEV - Frontend Developer Portfolio">
   <meta property="og:description" content="Building scalable web interfaces.">
-  <meta property="og:image" content="https://nik-013-portfolio.netlify.app/img/content/portfolio.png">
+  <meta property="og:image" content="https://nik-013-portfolio.vercel.app/img/content/portfolio.png">
   <meta property="og:type" content="website">
 
   <meta charset="UTF-8" />
@@ -42,53 +42,53 @@
     <div class="header_patch"></div>
 
     <header class="header">
+
       <div class="logo_container">
         <a href="#home" class="logo" aria-label="NIK.DEV Home">
           <span>NIK.DEV</span>
         </a>
       </div>
+
       <div class="menu_container" id="menuContainer">
+
         <nav class="menu" aria-label="Main navigation">
+
           <a href="#about">
             About Me
             <svg class="icon_ui" aria-hidden="true">
               <use href="/img/sprite/sprite.svg#icon-arrow"></use>
             </svg>
           </a>
+
           <a href="#portfolio">
             Portfolio
             <svg class="icon_ui" aria-hidden="true">
               <use href="/img/sprite/sprite.svg#icon-arrow"></use>
             </svg>
           </a>
+
           <a href="#skills">
             Skills
             <svg class="icon_ui" aria-hidden="true">
               <use href="/img/sprite/sprite.svg#icon-arrow"></use>
             </svg>
           </a>
+
+          <div class="lang_switcher" aria-label="Language switcher">
+            <a href="index.html" class="lang_link active" aria-current="page">EN</a>
+            <span aria-hidden="true">|</span>
+            <a href="ru.html" class="lang_link">RU</a>
+          </div>
+
           <a class="btn_contact mobile_only js_email" href="#" aria-label="Contact Me">
             Contact Me
             <svg class="icon_ui" aria-hidden="true">
               <use href="/img/sprite/sprite.svg#send_email"></use>
             </svg>
           </a>
+
         </nav>
-      </div>
 
-      <div class="lang_switcher" aria-label="Language switcher">
-        <a href="index.html" class="lang_link active" aria-current="page">EN</a>
-        <span aria-hidden="true">|</span>
-        <a href="ru.html" class="lang_link">RU</a>
-      </div>
-
-      <div class="contact_container desktop_only">
-        <a class="btn_contact js_email" href="#" aria-label="Contact Me">
-          Contact Me
-          <svg class="icon_ui" aria-hidden="true">
-            <use href="/img/sprite/sprite.svg#send_email"></use>
-          </svg>
-        </a>
       </div>
 
       <button class="burger_btn" aria-label="Toggle menu" aria-controls="menuContainer" aria-expanded="false">

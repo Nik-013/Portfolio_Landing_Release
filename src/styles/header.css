@@ -239,18 +239,6 @@ header.scrolled {
    УРОВЕНЬ 6: КНОПКА КОНТАКТОВ
    ================================================================= */
 
-/* Контейнер кнопки контактов (скрыт на мобилке) */
-.contact_container.desktop_only {
-  /* Display & Flow */
-  display: none;
-}
-
-/* Видимость элементов только на мобилке */
-.mobile_only {
-  /* Display & Flow */
-  display: inline-flex !important;
-}
-
 /* Кнопка связаться с градиентной границей */
 .btn_contact {
   /* Display & Flow */
@@ -306,7 +294,7 @@ header.scrolled {
 }
 
 /* Увеличение иконки при наведении */
-.btn_contact:hover svg {
+a.btn_contact:hover svg {
   /* Transform */
   transform: scale(1.4);
 }
@@ -380,6 +368,7 @@ header.scrolled {
   .menu_container {
     /* Display & Flow */
     display: block;
+    flex-grow: 1;
     visibility: visible;
     /* Position */
     position: static;
@@ -414,13 +403,4 @@ header.scrolled {
     font-size: 1rem;
   }
 
-  /* Контейнер кнопки контактов на десктопе */
-  .contact_container.desktop_only {
-    /* Display & Flow */
-    display: block;
-    flex-grow: 0;
-
-    /* Font */
-    text-align: right;
-  }
 }
