@@ -358,12 +358,6 @@ a.btn_contact:hover svg {
     display: none;
   }
 
-  /* Скрытие мобильных элементов на десктопе */
-  .mobile_only {
-    /* Display & Flow */
-    display: none !important;
-  }
-
   /* Десктопное меню */
   .menu_container {
     /* Display & Flow */
