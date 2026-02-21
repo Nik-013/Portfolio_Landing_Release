@@ -361,12 +361,17 @@
 
   <script type="module" src="/src/js/main.js"></script>
 
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+
   <div id="imageModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
     aria-describedby="modalImg">
 
     <h2 id="modalTitle" class="sr_only">Просмотр изображения</h2>
 
-    <button class="modal_nav_btn modal_prev" aria-label="Предыдущее изображение" aria-controls="modalImg">
+    <button class="modal_nav_btn modal_prev" aria-label="Предыдущее изобр��жение" aria-controls="modalImg">
       <svg class="icon_ui" aria-hidden="true">
         <use href="/img/sprite/sprite.svg#circle-arrow-left"></use>
       </svg>
